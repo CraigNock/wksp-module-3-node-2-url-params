@@ -52,11 +52,30 @@ app.get('/song/:number', (req, res) => {
 
 //books
 app.get('/books', (req, res) => {
-    res.render('pages/books', {
-        title: 'All Books',
+    res.render('pages/booklist', {
+        title: 'Book List',
         books: books
     });
 });
+//book id//#
+app.get('/book/:number', (req, res) => {
+    let number = req.params.number;
+    let selectBook = books.filter((item) => item.id == number);
+    if (number > 100 && number <126){
+        res.render('pages/book#', {
+            title: `Book #${number}`,
+            selectBook: selectBook[0]
+        });
+    } else {
+        res.status(404);
+        res.render('pages/fourOhFour', {
+        title: 'I got nothing',
+        path: req.originalUrl
+    });
+    }
+});
+//book type
+// app.get('/book/:number', (req, res) => {}
 
 //homepage
 app.get('/', (req, res) => {

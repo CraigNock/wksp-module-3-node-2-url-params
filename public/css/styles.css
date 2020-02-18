@@ -153,6 +153,11 @@ li {
   font-weight: bold;
   color: black; }
 
+.desc {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem; }
+
 body {
   background: #fafafa;
   display: flex;
