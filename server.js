@@ -5,6 +5,7 @@ const express = require('express');
 const morgan = require('morgan');
 
 const { top50 } = require('./data/top50');
+const { books } = require('./data/books')
 
 const PORT = process.env.PORT || 8000;
 
@@ -47,6 +48,14 @@ app.get('/song/:number', (req, res) => {
         path: req.originalUrl
     });
     }
+});
+
+//books
+app.get('/books', (req, res) => {
+    res.render('pages/books', {
+        title: 'All Books',
+        books: books
+    });
 });
 
 //homepage
