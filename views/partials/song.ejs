@@ -1,0 +1,15 @@
+<% top50.forEach(element => { %>
+    <li>
+        <div class="rank">
+            <h1>#<%- element.rank %> </h1>
+            <p>( <%- element.streams %> streams)</p>
+        </div>
+        <div class="title">
+            <p class="tite"> <%- element.title %> </p>
+            <p class="sub">by <%- element.artist %> </p>
+        </div>
+        <div class="date">
+        <p>publication date: <%- element.publicationDate %> </p>
+        </div>
+    </li>
+<% }); %>

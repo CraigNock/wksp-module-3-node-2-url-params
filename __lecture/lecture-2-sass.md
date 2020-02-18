@@ -24,7 +24,7 @@ SASS is CSS on steroids.
 
 ## SASS Fact #2
 
-There are two file types in which you can write SASS.
+There are two file types in which you can write SASS. //use .scss
 
 - `.sass` the original syntax.
     - more concise
@@ -35,7 +35,7 @@ There are two file types in which you can write SASS.
     - more expressive
     - encourages proper syntax / nesting
     - encourages modular code
-    - easier to document (comment)
+    - easier to document (comment) //comments don't show in browser
     - works with existing CSS codebases
     - replace CSS?
 
@@ -45,7 +45,7 @@ There are two file types in which you can write SASS.
 
 Supercharged Syntax!
 
-- Variables
+- Variables // $myColor = 'rgb 5 6 7 '
 - Mixins
 - Nesting
 - Functions

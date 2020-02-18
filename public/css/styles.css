@@ -83,6 +83,36 @@ codeblock {
   margin: 12px 32px 6px 0;
   padding: 12px 14px; }
 
+li {
+  padding: 1rem;
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-between; }
+
+.rank, .title, .date {
+  margin: 0;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column; }
+
+.rank > p {
+  font-size: .75rem; }
+
+.title {
+  padding-top: 0;
+  flex: 1; }
+
+.tite {
+  font-weight: bold; }
+
+.sub {
+  font-style: italic; }
+
+.date {
+  justify-content: flex-end;
+  font-size: .75rem;
+  padding-bottom: 0; }
+
 body {
   background: #fafafa;
   display: flex;

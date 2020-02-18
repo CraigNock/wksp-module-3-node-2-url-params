@@ -1,0 +1,24 @@
+<%- include ('../partials/header', {}) %>
+
+<% let artists = [] %>
+
+
+<% top50.forEach(song => { %>
+    <% if (!artists.includes(song.artist)) { %>
+        <% artists.push(song.artist) %>
+    <% } %>
+    
+<% }) %>
+
+
+
+
+
+<p><%- artists  %> </p>
+
+<ul>
+    <%- include ('../partials/song', {top50 : top50}) %>
+
+</ul>
+
+<%- include ('../partials/footer', {}) %>

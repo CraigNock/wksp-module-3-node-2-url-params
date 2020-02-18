@@ -26,6 +26,14 @@ app.get('/question10', q10)
 
 ```js
 // ...
+//the colon : allows number to be a key, can isolate multiple
+app.get('/question/:number', (req, res) => {
+    const number = req.params.number;
+
+    exercisesP1[`q${number}`]();
+});
+
+///if url input /question/6 // console.log(number) //6
 
 ```
 
