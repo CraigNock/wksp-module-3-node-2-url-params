@@ -81,7 +81,7 @@ app.get('/book/genre/:type', (req, res) => {
     let selectType = books.filter((item) => item.type == type);
     console.log('hi');
     res.render('pages/booktype', {
-        title: 'Book Type',
+        title: type,
         books: selectType
     });
     

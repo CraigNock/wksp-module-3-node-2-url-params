@@ -8,8 +8,11 @@
             <p class="tite"> <%- element.title %> </p>
             <p class="sub">by <%- element.author %> </p>
         </div>
+        <div>
+            <p><img src="<%- element.imgUrl %> " alt="book cover"></p>
+        </div>
         <div class="desc">
-        <p><%- element.description %> </p>
+            <p><%- element.description %> </p>
         </div>
     </li>
 <% }); %>
