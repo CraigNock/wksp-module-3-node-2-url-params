@@ -75,10 +75,12 @@ app.get('/book/:number', (req, res) => {
     }
 });
 //book type
-app.get('/book/:type', (req, res) => {
+app.get('/book/genre/:type', (req, res) => {
     let type = req.params.type;
-    let selectType = books.filter((item) => item.type == `${type}`);
-    res.render('pages/booklist', {
+    console.log(type);
+    let selectType = books.filter((item) => item.type == type);
+    console.log('hi');
+    res.render('pages/booktype', {
         title: 'Book Type',
         books: selectType
     });
