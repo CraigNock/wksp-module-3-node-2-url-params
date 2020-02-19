@@ -158,6 +158,9 @@ li {
   align-items: center;
   padding-left: 2rem; }
 
+.rank > img {
+  object-fit: none; }
+
 body {
   background: #fafafa;
   display: flex;
