@@ -1,0 +1,40 @@
+<%- include ('../partials/header', {}) %>
+
+<% let artists = []; %>
+
+
+<% top50.forEach((song) => { %>
+    
+        <% artists.push(song.artist) %>
+    
+<% }); %>
+
+<% 
+let uniArt = [];
+artists.forEach(art => {
+    let count = 0;
+    for (let i = 0 ; i< artists.length ; i++){
+        if (artists[i] === art){
+            count ++;
+        };
+    };
+    uniArt.push({
+        artist: art, 
+        count: count
+    });
+    
+}); 
+uniArt.sort((a, b) => a.count < b.count ? 1 : -1);
+//top artist becomes uniArt[0]
+
+
+let topArtist = top50.filter((song) => {
+    return song.artist === `${uniArt[0].artist}`;
+});
+%> 
+
+<ul>
+    <%- include ('../partials/song', {top50 : topArtist}) %>
+</ul>
+
+<%- include ('../partials/footer', {}) %>

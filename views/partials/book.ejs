@@ -1,0 +1,18 @@
+<% books.forEach(element => { %>
+    <li>
+        <div class="rank">
+            <h1>#<%- element.id %> </h1>
+            <p>(<%- element.type %>)</p>
+        </div>
+        <div class="title">
+            <p class="tite"> <%- element.title %> </p>
+            <p class="sub">by <%- element.author %> </p>
+        </div>
+        <div>
+            <p><img src="<%- element.imgUrl %> " alt="book cover"></p>
+        </div>
+        <div class="desc">
+            <p><%- element.description %> </p>
+        </div>
+    </li>
+<% }); %>

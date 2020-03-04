@@ -1,0 +1,17 @@
+<%- include ('../partials/header', {}) %>
+<div class="bookbox">
+    <div class="rank">
+        <h1>#<%- selectBook.id %> </h1> 
+        <p>(<%- selectBook.type %>)</p><span><img src="<%- selectBook.imgUrl %> " alt="book cover"></span>
+        
+    </div>
+    <div class="title">
+        <p class="tite"> <%- selectBook.title %> </p>
+        <p class="sub">by <%- selectBook.author %> </p>
+    </div>
+    <div class="desc">
+    <p><%- selectBook.description %> </p>
+    </div>
+    
+</div>
+<%- include ('../partials/footer', {}) %>

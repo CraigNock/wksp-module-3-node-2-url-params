@@ -1,0 +1,11 @@
+<%- include ('../partials/header', {}) %>
+
+<div class="songbox">
+    <p class="songtitle"><%- selectSong.title %> </p>
+    <p class="songartist"><%- selectSong.artist %></p>
+    <p class="songstreams"><%- selectSong.streams %> </p>
+</div>
+
+<%- include ('../partials/navs', {rank : selectSong.rank}) %>
+
+<%- include ('../partials/footer', {}) %>

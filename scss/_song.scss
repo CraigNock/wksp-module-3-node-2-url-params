@@ -1,0 +1,36 @@
+li {
+    padding: 1rem;
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    // width: 100vw;
+}
+
+.rank, .title, .date {
+    margin: 0;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.rank > p {
+    font-size: .75rem;
+}
+
+.title {
+    padding-top: 0;
+    flex: 1;
+}
+
+.tite{
+    font-weight: bold;
+}
+.sub {
+    font-style: italic;
+}
+
+.date {
+    justify-content: flex-end;
+    font-size: .75rem;
+    padding-bottom: 0;
+}
